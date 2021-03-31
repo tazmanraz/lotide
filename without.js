@@ -16,29 +16,16 @@ const assertArraysEqual = function(actual, expected) {
 
 const without = function(input, takeout){
   let newArr = [];
-  // for (let i = 0; i < input.length; i++){
-  //   for (let j = 0; i < takeout.length; j++){
 
-  //   }
-  // }
-  // for (let i of input){
-  //   for (let j of takeout){
-  //     if (i !== j){
-  //       newArr.push(j);
-  //     }
-  //   }
-  // }
-  // return newArr;
-
-  for (let i=0; i < input.length; i++){
-    console.log(input.includes(takeout[0]))
-    if (!input.includes(takeout[i])){
-      newArr.push(i);
+  for (let i = 0; i < input.length; i++){
+    if (!takeout.includes(input[i])){
+      newArr.push(input[i]);
     }
   }
+  return newArr
+
 }
 
-//assertArraysEqual(["1", "2", "3"], ["1", "2", "3"])
-
+// test cases
 console.log(without([1, 2, 3], [1]))
 console.log(without(["1", "2", "3"], [1, 2, "3"]) )
