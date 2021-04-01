@@ -19,7 +19,7 @@ const countOnly = function(allItems, itemsToCount) {
         if(allItems[j] === allItems[i]){
             occurances++;
           }
-    }
+      }
       // Storing the passed items
       result[allItems[i]] = occurances
     }
