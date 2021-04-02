@@ -10,17 +10,17 @@ const eqArrays = function(arr1, arr2){
     }
   }
   return flag;
+
 }
 
-const assertArraysEqual = function(actual, expected) {
-
-  if (eqArrays(actual,expected)) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+const assertObjectsEqual = function(actual, expected) {
+  const inspect = require('util').inspect;
+  if (eqObjects(actual,expected)) {
+    console.log(`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
   } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+    console.log(`🛑🛑🛑 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
   }
 };
-
 
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
@@ -54,13 +54,17 @@ const eqObjects = function(object1, object2) {
     } 
   }
   return true;
-};
 
+};
 
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
-console.log(eqObjects(ab, ba)); // => true
-
 const abc = { a: "1", b: "2", c: "3" };
-console.log(eqObjects(ab, abc)); // => false
+const cd = { c: "1", d: ["2", 3] };
+const dc = { d: ["2", 3], c: "1" };
+const cd2 = { c: "1", d: ["2", 3, 4] };
 
+assertObjectsEqual(ab, ba);// pass
+assertObjectsEqual(ab, abc);// fail
+assertObjectsEqual(cd, dc);// pass
+assertObjectsEqual(cd, cd2);// fail

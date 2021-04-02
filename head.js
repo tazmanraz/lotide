@@ -8,7 +8,6 @@ const assertEqual = function(actual, expected) {
   } else {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
-  return true;
 };
 
 assertEqual(head([5,6,7]), 5);

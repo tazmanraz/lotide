@@ -4,7 +4,6 @@ const assertEqual = function(actual, expected) {
   } else {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
-  return true;
 };
 
 const findKeyByValue = function(obj, val){

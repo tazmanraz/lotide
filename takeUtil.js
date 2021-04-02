@@ -1,14 +1,15 @@
 const takeUntil = function(array, callback) {
-  let arr=[]
-  for(i = 0; i < array.length; i++){
-    if (!callback(array[i])){
-      arr.push(array[i])
-    }
-    else {
-      return arr;
+  let flag = true;
+
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+  for (let i = 0; i < arr1.length; i++){
+    if (arr1[i] !== arr2[i]){
+      flag = false;
     }
   }
-  return arr;
+  return flag;
 
 }
 

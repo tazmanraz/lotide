@@ -7,8 +7,9 @@ const assertEqual = function(actual, expected) {
 };
 
 const countOnly = function(allItems, itemsToCount) {
-  const result = {}
+  const results = {}
   
+  //This is the old way I did it which is more complicated
   for (let i = 0;  i < allItems.length; i++){
     let occurances = 0;
     //Checks the conditions to pass through
@@ -21,10 +22,27 @@ const countOnly = function(allItems, itemsToCount) {
           }
       }
       // Storing the passed items
-      result[allItems[i]] = occurances
+      results[allItems[i]] = occurances
     }
   }
-  return result;
+
+  // This is the way I was supposed to do it
+  // // iterates through all names and sets as item
+  // for (let item of allItems){
+  //   //this is the filter of the object that only checks for true passes
+  //   if (itemsToCount[item]) {
+  //     //checks if names repeat in allItems list
+  //     if (results[item]) {
+  //       results[item]++;
+  //     //this will initialize the key value pair if it passes filter
+  //     } else {
+  //       results[item] = 1;
+  //     } 
+  //   }
+  // }
+
+  console.log(results)
+  return results;
  } 
 
 
