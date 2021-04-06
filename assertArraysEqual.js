@@ -1,5 +1,4 @@
 //This is an assertion to see if two arrays are equal
-
 const eqArrays = require('./eqArrays');
 
 const assertArraysEqual = function(actual, expected) {
@@ -12,3 +11,4 @@ const assertArraysEqual = function(actual, expected) {
 
 //assertArraysEqual(["1", "2", "3"], ["1", "2", "3"])
 module.exports = assertArraysEqual;
+

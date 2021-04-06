@@ -23,4 +23,6 @@ const countLetters = function(word) {
   return wordCount
 }
 
-countLetters('deeerp')
+module.exports = countLetters;
+
+//countLetters('deeerp')

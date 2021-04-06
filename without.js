@@ -30,9 +30,10 @@ const without = function(input, takeout){
     }
   }
   return newArr
-
 }
 
+module.exports = without;
+
 // test cases
-console.log(without([1, 2, 3], [1]))
-console.log(without(["1", "2", "3"], [1, 2, "3"]) )
+// console.log(without([1, 2, 3], [1]))
+// console.log(without(["1", "2", "3"], [1, 2, "3"]) )

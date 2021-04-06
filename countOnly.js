@@ -25,42 +25,26 @@ const countOnly = function(allItems, itemsToCount) {
       results[allItems[i]] = occurances
     }
   }
-
-  // This is the way I was supposed to do it
-  // // iterates through all names and sets as item
-  // for (let item of allItems){
-  //   //this is the filter of the object that only checks for true passes
-  //   if (itemsToCount[item]) {
-  //     //checks if names repeat in allItems list
-  //     if (results[item]) {
-  //       results[item]++;
-  //     //this will initialize the key value pair if it passes filter
-  //     } else {
-  //       results[item] = 1;
-  //     } 
-  //   }
-  // }
-
-  console.log(results)
   return results;
  } 
 
+ module.exports = countOnly;
 
-const firstNames = [
-  "Karl",
-  "Salima",
-  "Agouhanna",
-  "Fang",
-  "Kavith",
-  "Jason",
-  "Salima",
-  "Fang",
-  "Joe"
-];
+// const firstNames = [
+//   "Karl",
+//   "Salima",
+//   "Agouhanna",
+//   "Fang",
+//   "Kavith",
+//   "Jason",
+//   "Salima",
+//   "Fang",
+//   "Joe"
+// ];
 
-const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
+// const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
 
-assertEqual(result1["Jason"], 1);
-assertEqual(result1["Karima"], undefined);
-assertEqual(result1["Fang"], 2);
-assertEqual(result1["Agouhanna"], undefined);
+// assertEqual(result1["Jason"], 1);
+// assertEqual(result1["Karima"], undefined);
+// assertEqual(result1["Fang"], 2);
+// assertEqual(result1["Agouhanna"], undefined);

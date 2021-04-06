@@ -22,8 +22,6 @@ const assertArraysEqual = function(actual, expected) {
 };
 
 const letterPositions = function(sentence) {
-  
-  console.log(sentence)
   const results = {};
 
   for (let i = 0;  i < sentence.length; i++){
@@ -40,6 +38,8 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-console.log(letterPositions('hello'));
+module.exports = letterPositions;
 
-assertArraysEqual(letterPositions("hello"), 1);
+// console.log(letterPositions('hello'));
+
+// assertArraysEqual(letterPositions("hello"), 1);
